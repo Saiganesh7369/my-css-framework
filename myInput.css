@@ -1,23 +1,62 @@
 /* Simple Input CSS */
 .my-input {
-    width: 100%;
-    padding: 0.8rem 1rem;
-    font-size: 1rem;
-    line-height: 1.5;
-    color: #495057;
-    background-color: #fff;
-    border: 1px solid #ced4da;
-    border-radius: 0.25rem;
-    transition: border-color 0.3s, box-shadow 0.3s;
-  }
-  
-  .my-input:focus {
-    border-color: #007bff;
-    outline: none;
-    box-shadow: 0 0 5px rgba(0, 123, 255, 0.25);
-  }
-  
-  .my-input::placeholder {
-    color: #6c757d;
-  }
-  
+  width: 100%;
+  padding: 0.8rem 1.2rem; /* Slightly increase the padding for better touch targets */
+  font-size: 1rem;
+  line-height: 1.5;
+  color: #333; /* A darker text color for better contrast */
+  background-color: #f8f9fa; /* Light background for better contrast */
+  border: 1px solid #ced4da;
+  border-radius: 0.5rem; /* Rounded corners for a modern look */
+  transition: border-color 0.3s, box-shadow 0.3s, transform 0.2s ease; /* Adding transform transition */
+  box-sizing: border-box; /* Ensures padding is included in width calculation */
+}
+
+/* Focus state */
+.my-input:focus {
+  border-color: #007bff; /* Brighter blue for focus border */
+  outline: none; /* Remove default outline */
+  box-shadow: 0 0 8px rgba(0, 123, 255, 0.25); /* A little stronger blue shadow */
+  transform: scale(1.02); /* Slight scale effect on focus */
+}
+
+/* Placeholder styles */
+.my-input::placeholder {
+  color: #6c757d; /* Placeholder text color */
+  opacity: 0.7; /* Subtle transparency */
+  font-style: italic; /* Italicized placeholder for a more modern look */
+}
+
+/* Hover effect */
+.my-input:hover {
+  border-color: #80bdff; /* Light blue border on hover */
+  background-color: #ffffff; /* Change background color to white on hover */
+}
+
+/* Disabled state */
+.my-input:disabled {
+  background-color: #e9ecef; /* Light gray background when disabled */
+  border-color: #ddd; /* Lighter border */
+  color: #6c757d; /* Lighter text */
+  cursor: not-allowed; /* Indicate that the input is disabled */
+}
+
+/* Error state */
+.my-input.error {
+  border-color: #dc3545; /* Red border for errors */
+  background-color: #f8d7da; /* Light red background */
+}
+
+.my-input.error:focus {
+  box-shadow: 0 0 8px rgba(220, 53, 69, 0.25); /* Error shadow */
+}
+
+/* Success state */
+.my-input.success {
+  border-color: #28a745; /* Green border for success */
+  background-color: #d4edda; /* Light green background */
+}
+
+.my-input.success:focus {
+  box-shadow: 0 0 8px rgba(40, 167, 69, 0.25); /* Success shadow */
+}
