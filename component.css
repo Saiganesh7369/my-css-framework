@@ -1,0 +1,83 @@
+.input-wrapper {
+    position: relative;
+    display: inline-block;
+    width: 250px;
+    margin: 1rem 0;
+  }
+  
+  .input-field {
+    width: 100%;
+    padding: 0.8rem 1.2rem;
+    font-size: 1rem;
+    line-height: 1.5;
+    color: #333;
+    background-color: #f8d7da;
+    border: 1px solid #ced4da;
+    border-radius: 0.5rem;
+    transition: border-color 0.3s, box-shadow 0.3s, transform 0.2s ease;
+    box-sizing: border-box;
+    padding-left: 2.5rem;
+    padding-right: 2.5rem;
+  }
+  
+  .input-wrapper .icon {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #6c757d;
+    font-size: 1.5rem;
+    pointer-events: none;
+    z-index: 1;
+  }
+  
+  .input-wrapper .icon.icon-left {
+    left: 10px;
+  }
+  
+  .input-wrapper .icon.icon-right {
+    right: 10px;
+  }
+  
+  .input-field:focus {
+    border-color: #007bff;
+    outline: none;
+    box-shadow: 0 0 8px rgba(0, 123, 255, 0.25);
+    transform: scale(1.02);
+  }
+  
+  .input-field::placeholder {
+    color: #6c757d;
+    opacity: 0.7;
+    font-style: italic;
+  }
+  
+  .input-field:hover {
+    border-color: #80bdff;
+    background-color: #ffffff;
+  }
+  
+  .input-field:disabled {
+    background-color: #e9ecef;
+    border-color: #ddd;
+    color: #6c757d;
+    cursor: not-allowed;
+  }
+  
+  .input-field--error {
+    border-color: #dc3545;
+    background-color: #f8d7da;
+  }
+  
+  .input-field--error:focus {
+    box-shadow: 0 0 8px rgba(220, 53, 69, 0.25);
+  }
+  
+  .input-field--success {
+    border-color: #28a745;
+    background-color: #d4edda;
+  }
+  
+  .input-field--success:focus {
+    box-shadow: 0 0 8px rgba(40, 167, 69, 0.25);
+  }
+  
