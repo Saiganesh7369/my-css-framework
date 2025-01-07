@@ -1,3 +1,11 @@
+/* General Styles */
+body {
+  font-family: Arial, Helvetica, sans-serif; /* Add font-family for consistent text rendering */
+  margin: 2rem;
+  background-color: #f9f9f9;
+  color: #333;
+}
+
 /* General Input Wrapper Styles */
 .input-wrapper {
   position: relative;
